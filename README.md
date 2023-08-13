@@ -19,4 +19,4 @@ This repo's goal is to provide opinionated, but tiny template that ready to be u
 - [Docker](https://docs.docker.com/get-started/)
 
 ## Getting Started
-Just run `make local-setup` and `make run`. That's it :)
+Create `.env` file (see `env.sample`), then run `make local-setup` and `make run`. That's it :)
