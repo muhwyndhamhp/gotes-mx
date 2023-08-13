@@ -21,10 +21,6 @@ func NewTemplateRenderer(e *echo.Echo, paths []string) {
 	for i := range paths {
 		template.Must(tmpl.ParseGlob(paths[i]))
 	}
-	// template.Must(tmpl.ParseGlob("public/views/*.html"))
-	// template.Must(tmpl.ParseGlob("public/components/*.html"))
-	// template.Must(tmpl.ParseGlob("public/templates/*.html"))
-
 	t := newTemplate(tmpl)
 	e.Renderer = t
 }
