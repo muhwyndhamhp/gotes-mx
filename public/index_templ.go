@@ -22,6 +22,10 @@ func Index(name string) templ.Component {
 			var_1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
+		err = DocType().Render(ctx, templBuffer)
+		if err != nil {
+			return err
+		}
 		err = Head().Render(ctx, templBuffer)
 		if err != nil {
 			return err

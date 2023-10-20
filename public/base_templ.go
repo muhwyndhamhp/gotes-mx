@@ -64,7 +64,7 @@ func Head() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</script></head>")
+		_, err = templBuffer.WriteString("</script><link rel=\"icon\" type=\"image/x-icon\" href=\"/dist/favicon.ico\"></head>")
 		if err != nil {
 			return err
 		}

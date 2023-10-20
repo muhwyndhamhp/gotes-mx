@@ -27,3 +27,7 @@ func NewTemplateRenderer(e *echo.Echo) {
 func newTemplate() echo.Renderer {
 	return &Template{}
 }
+
+func AssertRender(c echo.Context, statusCode int, component templ.Component) error {
+	return c.Render(statusCode, "", component)
+}

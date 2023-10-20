@@ -21,7 +21,7 @@ func main() {
 
 	e.GET("/", func(c echo.Context) error {
 		component := public.Index("Wyndham")
-		return c.Render(http.StatusOK, "", component)
+		return template.AssertRender(c, http.StatusOK, component)
 	})
 	e.Logger.Fatal(e.Start(fmt.Sprintf(":%s", config.Get(config.APP_PORT))))
 }
