@@ -1,12 +1,13 @@
 ifeq ("$(wildcard .env)","")
     $(shell cp env.sample .env)
+	$(shell echo "DB_NAME=$($1)" > .env)
 endif
 
 include .env
 
 $(eval export $(grep -v '^#' .env | xargs -0))
 
-GO_MODULE := github.com/muhwyndhamhp/todo-mx
+GO_MODULE := github.com/muhwyndhamhp/gotes-mx
 VERSION  ?= $(shell git describe --tags --abbrev=0)
 LDFLAGS   := -X "$(GO_MODULE)/config.Version=$(VERSION)"
 DB_DSN    := "postgresql://$(DB_USER):$(DB_PASSWORD)@$(DB_HOST):$(DB_PORT)/$(DB_NAME)?sslmode=disable"
