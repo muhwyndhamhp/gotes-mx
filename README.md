@@ -8,6 +8,8 @@ This repo's goal is to provide opinionated, but tiny template that ready to be u
 - Quick Local dev setup including DB via `make setup-local`
 - ORM ready using [GORM](https://gorm.io/)
 - Routing ready using [Labstack Echo](https://github.com/labstack/echo)
+- TempL is used to templating purpose, see: [TempL Getting Started](https://templ.guide)
+- [TailwindCSS](https://tailwindcss.com/) Ready! 
 - Exposed directory for resources in the `dist` directory
 
 ## What this repo will never handle
