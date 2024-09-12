@@ -1,0 +1,66 @@
+package src
+
+import (
+	"fmt"
+	"github.com/muhwyndhamhp/gotes-mx/internal"
+	"time"
+)
+
+templ Todos(todos []internal.Todo) {
+	@DocType()
+	@Head()
+	@Body(todoPage(todos))
+}
+
+templ todoPage(todos []internal.Todo) {
+	<table class="table">
+		<!-- head -->
+		<thead>
+			<tr class="h-16">
+				<th></th>
+				<th>ID</th>
+				<th>Description</th>
+				<th>Is Finished</th>
+				<th>Finished At</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			for _, todo:= range todos {
+				@TodoRow(todo)
+			}
+		</tbody>
+	</table>
+}
+
+templ TodoRow(todo internal.Todo) {
+	<tr class="h-16" id={ fmt.Sprintf("row-id-%d", todo.ID) }>
+		<th></th>
+		<th>{ fmt.Sprintf("%d", todo.ID) }</th>
+		<th>{ todo.Description }</th>
+		<th>
+			<input
+				type="checkbox"
+				id="isFinished"
+				name="isFinished"
+				if todo.IsFinished {
+					checked
+				}
+				hx-post={ fmt.Sprintf("/todos/%d/toggle-finished", todo.ID) }
+				hx-swap="outerHTML"
+				hx-target={ fmt.Sprintf("#row-id-%d", todo.ID) }
+			/>
+			<br/>
+		</th>
+		<th>{ getFinishedAt(todo.FinishedAt) }</th>
+		<th></th>
+	</tr>
+}
+
+func getFinishedAt(t *time.Time) string {
+	if t != nil {
+		return t.Format(time.RFC3339)
+	} else {
+		return ""
+	}
+}

@@ -548,6 +548,14 @@ html{
   display: flex;
 }
 
+.table{
+  display: table;
+}
+
+.h-16{
+  height: 4rem;
+}
+
 .h-screen{
   height: 100vh;
 }
@@ -605,9 +613,22 @@ html{
   font-weight: 700;
 }
 
+.italic{
+  font-style: italic;
+}
+
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-zinc-950{
+  --tw-text-opacity: 1;
+  color: rgb(9 9 11 / var(--tw-text-opacity));
+}
+
+.underline{
+  text-decoration-line: underline;
 }
 
 .shadow-xl{

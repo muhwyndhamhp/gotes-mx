@@ -73,13 +73,13 @@ func pageIndex(name string) templ.Component {
 		var templ_7745c5c3_Var3 string
 		templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(name)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `src/index.templ`, Line: 12, Col: 68}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/src/index.templ`, Line: 12, Col: 68}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span> Template Library</p><button class=\"bg-slate-500 p-4 mt-8 text-white rounded-xl\" hx-get=\"/click-me\">Click Me to see HTMX in Action!</button></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</span> Template Library</p><p class=\"mt-2\">Go to sample <a href=\"/todos\" class=\"underline italic bold text-zinc-950\">Todo App Here</a> or</p><button class=\"bg-slate-500 p-4 mt-8 text-white rounded-xl\" hx-get=\"/click-me\">Click Me to see HTMX in Action!</button></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
