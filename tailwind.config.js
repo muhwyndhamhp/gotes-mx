@@ -3,7 +3,7 @@ const plugin = require('tailwindcss/plugin');
 
 module.exports = {
     mode: 'jit',
-    content: ["./public/**/*.templ"],
+    content: ["./src/**/*.templ"],
     theme: {
         screens: {
             'xs': '320px',
