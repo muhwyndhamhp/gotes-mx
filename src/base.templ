@@ -1,0 +1,19 @@
+package src
+
+templ DocType() {
+	<!DOCTYPE html>
+}
+
+templ Head() {
+	<head>
+		<link rel="stylesheet" href="/public/tailwind.css"/>
+		<script src="/public/htmx.min.js"></script>
+		<link rel="icon" type="image/x-icon" href="/public/favicon.ico"/>
+	</head>
+}
+
+templ Body(component templ.Component) {
+	<body class="bg-slate-100 px-6 w-full h-screen flex flex-col">
+		@component
+	</body>
+}
