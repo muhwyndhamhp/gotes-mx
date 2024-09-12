@@ -3,7 +3,6 @@ package routing
 import (
 	"net/http"
 
-	"github.com/apsystole/log"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 	"github.com/muhwyndhamhp/gotes-mx/utils/resp"
@@ -32,7 +31,7 @@ func httpErrorHandler(err error, c echo.Context) {
 	if code != http.StatusInternalServerError {
 		_ = c.JSON(code, err)
 	} else {
-		log.Error(err)
+		c.Logger().Error(err)
 		_ = resp.HTTPServerError(c)
 	}
 }

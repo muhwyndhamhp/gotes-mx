@@ -1,7 +1,5 @@
 github.com/a-h/templ v0.2.408 h1:WmXdjVjxjMJyjRg+34cgg+hRC0duDg9OJy6euZbS4ek=
 github.com/a-h/templ v0.2.408/go.mod h1:6Lfhsl3Z4/vXl7jjEjkJRCqoWDGjDnuKgzjYMDSddas=
-github.com/apsystole/log v0.3.0 h1:uES5wJvdvzL6Q4KXJt6OQnDtmPCbohFkdx6v7OpbDC4=
-github.com/apsystole/log v0.3.0/go.mod h1:BBvif4d0jOPNYgXzNLVdWE//WjefJ9Hwfy/2Y5U+SV0=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
