@@ -32,7 +32,7 @@ func RegisterRoutes(app *internal.Application) {
 
 		component := src.Todos(todos)
 		return template.AssertRender(c, http.StatusOK, component)
-	})
+	}, app.RequireAuthMW)
 
 	app.E.POST("/todos/:id/toggle-finished", func(c echo.Context) error {
 		ctx := c.Request().Context()
@@ -58,5 +58,5 @@ func RegisterRoutes(app *internal.Application) {
 
 		component := src.TodoRow(todo)
 		return template.AssertRender(c, http.StatusOK, component)
-	})
+	}, app.RequireAuthMW)
 }

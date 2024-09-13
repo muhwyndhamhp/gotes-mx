@@ -6,6 +6,8 @@ import (
 )
 
 type Application struct {
-	DB *gorm.DB
-	E  *echo.Echo
+	DB            *gorm.DB
+	E             *echo.Echo
+	RequireAuthMW echo.MiddlewareFunc
+	CheckAuthMW   echo.MiddlewareFunc
 }
