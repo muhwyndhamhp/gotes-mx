@@ -11,12 +11,13 @@ import (
 const (
 	ENV_FILE = ".env"
 
-	APP_PORT    = "APP_PORT"
-	DB_HOST     = "DB_HOST"
-	DB_PORT     = "DB_PORT"
-	DB_USER     = "DB_USER"
-	DB_NAME     = "DB_NAME"
-	DB_PASSWORD = "DB_PASSWORD"
+	APP_PORT          = "APP_PORT"
+	DB_HOST           = "DB_HOST"
+	DB_PORT           = "DB_PORT"
+	DB_USER           = "DB_USER"
+	DB_NAME           = "DB_NAME"
+	DB_PASSWORD       = "DB_PASSWORD"
+	ZITADEL_CLIENT_ID = "ZITADEL_CLIENT_ID"
 )
 
 func init() {

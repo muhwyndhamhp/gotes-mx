@@ -23,3 +23,7 @@ setup-local: tools
 
 run:
 	@air -c .air.toml --build.cmd "go build -ldflags \"$(LDFLAGS)\" -o ./tmp/main ."
+
+seed:
+	@go run ./db/migration/migration.go
+	@go run ./db/seed/seed.go

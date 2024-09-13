@@ -23,7 +23,7 @@ import (
 var (
 	domain      = flag.String("domain", "localhost", "your ZITADEL instance domain (in the form: https://<instance>.zitadel.cloud or https://<yourdomain>)")
 	key         = flag.String("key", "MasterkeyNeedsToHave32Characters", "encryption key")
-	clientID    = flag.String("clientID", config.Get("ZITADEL_CLIENT_ID"), "clientID provided by ZITADEL")
+	clientID    = flag.String("clientID", config.Get(config.ZITADEL_CLIENT_ID), "clientID provided by ZITADEL")
 	redirectURI = flag.String("redirectURI", "http://localhost:4040/auth/callback", "redirectURI registered at ZITADEL")
 )
 
